@@ -1,0 +1,29 @@
+<h1>Listing answer_managers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Defaultanswers</th>
+      <th>Customanswers</th>
+      <th>Answertracker</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @answer_managers.each do |answer_manager| %>
+      <tr>
+        <td><%= answer_manager.DefaultAnswers %></td>
+        <td><%= answer_manager.CustomAnswers %></td>
+        <td><%= answer_manager.AnswerTracker %></td>
+        <td><%= link_to 'Show', answer_manager %></td>
+        <td><%= link_to 'Edit', edit_answer_manager_path(answer_manager) %></td>
+        <td><%= link_to 'Destroy', answer_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Answer manager', new_answer_manager_path %>

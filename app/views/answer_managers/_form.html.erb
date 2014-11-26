@@ -1,0 +1,29 @@
+<%= form_for(@answer_manager) do |f| %>
+  <% if @answer_manager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer_manager.errors.count, "error") %> prohibited this answer_manager from being saved:</h2>
+
+      <ul>
+      <% @answer_manager.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :DefaultAnswers %><br>
+    <%= f.text_field :DefaultAnswers %>
+  </div>
+  <div class="field">
+    <%= f.label :CustomAnswers %><br>
+    <%= f.text_field :CustomAnswers %>
+  </div>
+  <div class="field">
+    <%= f.label :AnswerTracker %><br>
+    <%= f.text_field :AnswerTracker %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

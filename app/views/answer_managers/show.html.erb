@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Defaultanswers:</strong>
+  <%= @answer_manager.DefaultAnswers %>
+</p>
+
+<p>
+  <strong>Customanswers:</strong>
+  <%= @answer_manager.CustomAnswers %>
+</p>
+
+<p>
+  <strong>Answertracker:</strong>
+  <%= @answer_manager.AnswerTracker %>
+</p>
+
+<%= link_to 'Edit', edit_answer_manager_path(@answer_manager) %> |
+<%= link_to 'Back', answer_managers_path %>
